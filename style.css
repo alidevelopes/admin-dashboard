@@ -5,3 +5,121 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --sidebar-clr: blue;
+}
+.wrapper {
+  background-color: lightblue;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) 5fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+/* sidebar left */
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / span 2;
+  background-color: hsl(240, 100%, 70%);
+}
+
+.sidebar-content {
+  margin-bottom: 2rem;
+  background-color: antiquewhite;
+}
+
+ul {
+  list-style: none;
+}
+
+li > a {
+  text-decoration: none;
+  /* color: red; */
+}
+
+/* --- */
+.wrapper > *:not(.sidebar) {
+  grid-column: 2 / -1;
+  /* background-color: red; */
+}
+
+/* header */
+.header {
+  background-color: yellowgreen;
+  display: grid;
+  gap: 0.5em;
+}
+
+input {
+  background-color: lightblue;
+  border: none;
+  border-radius: 10px;
+}
+
+.header-top-container,
+.header-btm-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-columns: 2fr 1fr;
+}
+
+.header-top-left,
+.header-btm-left {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+.header-top-right,
+.header-btm-right {
+  background-color: lightcoral;
+}
+
+/* main */
+
+.main {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 2fr minmax(180px, 1fr);
+  background-color: hsl(0, 0%, 90%);
+}
+
+/* main left with project cards */
+.main-left {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-rows: 1rem repeat(auto-fit, minmax(200px, 220px));
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.main-left > h3 {
+  grid-column: 1 / -1;
+  /* background-color: red; */
+}
+
+.main-left-card {
+  border-left: 10px solid orange;
+}
+
+/* main right container for announcements and trends */
+.main-right {
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1rem minmax(200px, 1fr) 1rem minmax(200px, 1fr);
+  gap: 1rem;
+}
+
+.main-left-card,
+.sidebar-right-top,
+.sidebar-right-btm {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 1px 3px hsl(0, 0%, 80%);
+}
+
+hr {
+  width: 50%;
+  margin: 1rem auto;
+}
