@@ -45,37 +45,76 @@ li > a {
 
 /* header */
 .header {
-  background-color: yellowgreen;
+  padding: 0.5em 2em;
+  background-color: white;
+  grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
   display: grid;
-  gap: 0.5em;
 }
 
 input {
   background-color: lightblue;
   border: none;
   border-radius: 10px;
+  width: clamp(2rem, 500px, 100%);
+  height: 1.8rem;
+  padding-inline: 0.9rem;
 }
 
-.header-top-container,
-.header-btm-container {
+.header-top,
+.header-btm {
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-columns: 2fr 1fr;
 }
 
-.header-top-left,
-.header-btm-left {
-  background-color: red;
+.header-top-left {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: 1rem 1fr;
+  gap: 1rem;
+  align-items: center;
 }
-.header-top-right,
-.header-btm-right {
-  background-color: lightcoral;
+
+.header-btm-left {
+  display: grid;
+  grid-template-columns: minmax(100px, 15%) 1fr;
+  align-items: center;
+}
+
+.header-right {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+
+.profile-img {
+  background-color: yellow;
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-img-big {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.profile-img-small {
+  font-size: 0.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+button {
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 1rem;
+  width: min-content;
+  height: min-content;
 }
 
 /* main */
-
 .main {
   padding: 1rem;
   display: grid;
